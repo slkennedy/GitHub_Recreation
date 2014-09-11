@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<!-- CSS Link-->
+<link href="dist/styles/main.css" rel="stylesheet" type="text/stylesheet">
+<!-- Icon Font Link-->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+</head>
+<body>
+<!-- Top Menu Bar Section-->
+<div class="overallWrapper">
+  <div class="menuBar">
+    <div class="menuWrapper">
+      <div class="menuLeft">
+      </div>
+      <div class="menuRight">
+        <div class="menuRightNav">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contents Section-->
+<div class="contents">
+  <!--   Side Bar Section-->
+  <div class="sideBar">
+    <div class="sideBarFirst">
+    </div>
+    <div class="sideBarSecond">
+    </div>
+    <div class="sideBarThird">
+    </div>
+    <div class="sideBarFourth">
+    </div>
+  </div>
+<!-- Main Content Section-->
+  <div class="mainContent">
+    <div class="mainContentMenu">
+    </div>
+    <div class="mainContentFeature">
+    </div>
+  </div>
+ </div>
+
+<!-- Script Starts Here-->
+<script id="templateMenuBar" type="text/template">
+      <div class="menuRightUser">
+        <img src ="<%= avatar %>"/>
+        <span><%= login %></span>
+      </div>
+</script>
+
+<!-- Script Links-->
+ <script src = "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+  <script src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src = "http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.js"></script>
+  <script src="token.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

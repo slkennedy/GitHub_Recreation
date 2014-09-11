@@ -1,0 +1,75 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'scss-lint' ]
+2 info using npm@2.0.0-beta.0
+3 info using node@v0.10.31
+4 verbose node symlink /usr/local/bin/node
+5 verbose cache add [ 'scss-lint', null ]
+6 verbose cache add spec="scss-lint" args=["scss-lint",null]
+7 verbose parsed spec { raw: 'scss-lint',
+7 verbose parsed spec   scope: null,
+7 verbose parsed spec   name: 'scss-lint',
+7 verbose parsed spec   rawSpec: '',
+7 verbose parsed spec   spec: '*',
+7 verbose parsed spec   type: 'range' }
+8 verbose addNamed [ 'scss-lint', '*' ]
+9 verbose addNamed [ null, '*' ]
+10 silly lockFile a4759363-scss-lint scss-lint@*
+11 verbose lock scss-lint@* /Users/SKennedy/.npm/a4759363-scss-lint.lock
+12 silly addNameRange { name: 'scss-lint', range: '*', hasData: false }
+13 verbose mapToRegistry name scss-lint
+14 verbose mapToRegistry uri https://registry.npmjs.org/scss-lint
+15 verbose request on initialization, where is /scss-lint
+16 verbose request after pass 1, where is /scss-lint
+17 verbose request url raw /scss-lint
+18 verbose request resolving registry [ 'https://registry.npmjs.org/', './scss-lint' ]
+19 verbose request after pass 2, where is https://registry.npmjs.org/scss-lint
+20 verbose request no auth needed
+21 info retrier registry request attempt 1 at 15:43:52
+22 verbose request id 2f8185c54aadc31b
+23 http request GET https://registry.npmjs.org/scss-lint
+24 http 404 https://registry.npmjs.org/scss-lint
+25 verbose headers { date: 'Wed, 10 Sep 2014 19:43:52 GMT',
+25 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 verbose headers   'content-type': 'application/json',
+25 verbose headers   'cache-control': 'max-age=0',
+25 verbose headers   'content-length': '52',
+25 verbose headers   'accept-ranges': 'bytes',
+25 verbose headers   via: '1.1 varnish',
+25 verbose headers   age: '0',
+25 verbose headers   'x-served-by': 'cache-iad2129-IAD',
+25 verbose headers   'x-cache': 'MISS',
+25 verbose headers   'x-cache-hits': '0',
+25 verbose headers   'x-timer': 'S1410378232.187988,VS0,VE12',
+25 verbose headers   'keep-alive': 'timeout=10, max=50',
+25 verbose headers   connection: 'Keep-Alive' }
+26 silly registry.get cb [ 404,
+26 silly registry.get   { date: 'Wed, 10 Sep 2014 19:43:52 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=0',
+26 silly registry.get     'content-length': '52',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-iad2129-IAD',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1410378232.187988,VS0,VE12',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly lockFile a4759363-scss-lint scss-lint@*
+28 silly lockFile a4759363-scss-lint scss-lint@*
+29 error 404 404 Not Found: scss-lint
+29 error 404
+29 error 404 'scss-lint' is not in the npm registry.
+29 error 404 You should bug the author to publish it
+29 error 404
+29 error 404 Note that you can also install from a
+29 error 404 tarball, folder, or http url, or git url.
+30 error System Darwin 13.3.0
+31 error command "node" "/usr/local/bin/npm" "install" "-g" "scss-lint"
+32 error cwd /Users/SKennedy/Documents/Code/TheIronYard/Class10
+33 error node -v v0.10.31
+34 error npm -v 2.0.0-beta.0
+35 error code E404
+36 verbose exit [ 1, true ]
