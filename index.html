@@ -42,7 +42,7 @@
 <!-- Top Menu Bar Script -->
 <script id="templateMenuBar" type="text/template">
     <div class="menuRightUser">
-      <img src = "<%= avatar_url %>"/>
+      <img src = "<%= avatarUrl %>"/>
       <span><%= login %></span>
     </div>
 </script>
@@ -59,7 +59,7 @@
 <!-- SideBar Script -->
 <script id="templateSideBar" type="text/template">
     <div class="sideBarFirst">
-      <img src = "<%= avatar_url %>"/>
+      <img src = "<%= avatarUrl %>"/>
       <h1>
       <span class="mainName"><%= name %></span>
       <span class="mainLogin"><%= login %></span>
@@ -73,29 +73,31 @@
     <div class="sideBarThird">
       <ul>
         <li>
-          <a href="<%= followers_url %>"
-            <span class="bigNumbers"><%= follwers %></span>
+          <a href="<%= followersUrl %>">
+            <span class="bigNumbers"><%= followers %></span>
             <span>Followers</span>
           </a>
         </li>
         <li>
-          <a href="<%=  %>"
+          <a href="<%= followersUrl %>">
             <span class="bigNumbers"></span>
             <span>Starred</span>
           </a>
         </li>
         <li>
-          <a href="<%= following_url %>"
+          <a href="<%= followingUrl %>"
             <span class="bigNumbers"><%= following %></span>
             <span>Following</span>
           </a>
         </li>
       </ul>
     </div>
+</script>
+<script id="templateSideBarOrgs" type="text/template">
     <div class="sideBarFourth">
       <h3>Organizations</h3>
-      <a href ="<%= url %>">
-      <img src="<%= avatar_url %>"/>
+      <a href ="<%= orgUrl %>">
+        <img src="<%= orgAvatar %>"/>
       </a>
     </div>
 </script>

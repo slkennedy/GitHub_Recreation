@@ -3,23 +3,30 @@ function reusableTemplate(templateId, container, model) {
 var templateFunction = _.template($('#'+ templateId).text());
 
 var renderedTemplate = templateFunction(model);
-console.log(renderedTemplate)
 $(container).append(renderedTemplate);
 }
 
 $.getJSON("https://api.github.com/users/slkennedy").done(function(user){
   var userData = {
-    avatar_url: user.avatar_url,
+    avatarUrl: user.avatar_url,
+    login: user.login,
+  };
+  reusableTemplate('templateMenuBar', '.menuRight', userData);
+
+  var sidebarData = {
+    avatarUrl: user.avatar_url,
     name: user.name,
     login: user.login,
     email: user.email,
+    created_at: user.created_at,
     followers: user.followers,
     followersUrl: user.follower_url,
     following: user.following,
     followingUrl: user.following_url,
     location: user.location
   };
-  reusableTemplate('templateMenuBar', '.menuRight', userData);
+  reusableTemplate('templateSideBar', '.sideBar', sidebarData);
+
 });
 
 $.getJSON("https://api.github.com/users/slkennedy/repos").done(function(repos){
@@ -43,19 +50,19 @@ reusableTemplate('templateMainContent', '.mainContentFeature', output);
 
 });
 
-// $.getJson("https://api.github.com/users/slkennedy/starred").done(function(starred){
+// $.getJSON("https://api.github.com/users/slkennedy/starred").done(function(starred){
 // console.log(starred);
 // });
 
-$.getJson("https://api.github.com/users/slkennedy/orgs").done(function(orgs){
+$.getJSON("https://api.github.com/users/slkennedy/orgs").done(function(orgs){
 var orgData = _.map(orgs, function(org){
 return{
-  avatar:avatar_url,
-  url:url,
+  orgAvatar:org.avatar_url,
+  orgUrl:org.url,
   };
 });
 
 _.each(orgData, function(output){
-reusableTemplate('templateSideBar', '.sideBar', output);
+reusableTemplate('templateSideBarOrgs', '.sideBar', output);
 });
 });
