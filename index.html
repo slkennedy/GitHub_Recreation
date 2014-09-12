@@ -52,7 +52,7 @@
     <div class="repoInfo">
       <h1 class="repoName"><%= repoName %></h1>
       <p class="repoDescription"><%= repoDescription %></p>
-      <p><%= updated %></p>
+      <p class="repoDate"><%= updated %></p>
     </div>
 </script>
 
@@ -67,7 +67,7 @@
     </div>
     <div class="sideBarSecond">
       <h3><%= location %></h3>
-      <h3><a href="mailto:slkennedy@gmail.com"><%= email %></a></h3>
+      <h3 class="email"><a href="mailto:slkennedy@gmail.com"><%= email %></a></h3>
       <h3><%= created_at %></h3>
     </div>
     <div class="sideBarThird">
@@ -93,6 +93,7 @@
       </ul>
     </div>
 </script>
+
 <script id="templateSideBarOrgs" type="text/template">
     <div class="sideBarFourth">
       <h3>Organizations</h3>

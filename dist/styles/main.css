@@ -1,0 +1,142 @@
+body {
+  font-family: helvetica; }
+
+
+.menuBar {
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  background-color: #f5f5f5;
+  border-bottom: solid 1px #ccc; }
+
+.menuWrapper {
+  width: 980px;
+  height: 28px;
+  padding: 20px;
+  margin: 0 auto;
+  position: absolute; }
+
+.menuLeft {
+  display: inline-block; }
+
+.menuRight {
+  float: right;
+  position: relative;
+  width: 230px; }
+
+.menuRightUser {
+  float: left;
+  position: relative; }
+  .menuRightUser img {
+    height: 20px;
+    width: 20px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+
+.menuRightNav {
+  float: right;
+  position: relative; }
+
+.contents {
+  width: 980px;
+  margin-top: 20px;
+  margin-left: 109.5px;
+  margin-right: 109.5px; }
+
+.sideBar {
+  width: 25%;
+  padding: 0 10px;
+  margin: 0;
+  float: left; }
+
+.sideBarFirst {
+  border-bottom: 1px solid #ccc; }
+  .sideBarFirst img {
+    width: 230px;
+    height: 230px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px; }
+  .sideBarFirst .mainName {
+    display: block;
+    font-size: 26px;
+    color: #333;
+    width: 100%; }
+  .sideBarFirst .mainLogin {
+    display: block;
+    color: #666;
+    font-size: 20px;
+    font-weight: 300; }
+
+.sideBarSecond {
+  width: 100%;
+  padding: 2px 0 2px 24px;
+  font-size: 13px;
+  color: #333;
+  border-bottom: 1px solid #ccc; }
+  .sideBarSecond h3 {
+    margin: 0;
+    font-weight: 300; }
+  .sideBarSecond .email a {
+    color: #4183c4;
+    text-decoration: none; }
+
+.sideBarThird {
+  border-bottom: 1px solid #ccc; }
+  .sideBarThird ul {
+    list-style: none;
+    display: inline-block; }
+  .sideBarThird a {
+    text-decoration: none;
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300; }
+  .sideBarThird a span {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300; }
+  .sideBarThird .bigNumbers {
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+    color: #4183c4;
+    font-weight: bold;
+    text-align: center; }
+
+.sideBarFourth {
+  border-bottom: 1px solid #ccc; }
+  .sideBarFourth img {
+    height: 42px;
+    width: 42px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+
+.mainContent {
+  float: right;
+  width: 75%; }
+
+.mainContentMenu {
+  float: right; }
+
+.mainContentFeature {
+  float: left; }
+  .mainContentFeature .repoInfo {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc; }
+  .mainContentFeature .repoName {
+    color: #4183c4;
+    font-size: 14px;
+    margin: 0; }
+  .mainContentFeature .repoDescription {
+    font-size: 14px;
+    color: #333;
+    margin: 0; }
+  .mainContentFeature .repoDate {
+    font-size: 13px;
+    color: #888;
+    margin: 0; }

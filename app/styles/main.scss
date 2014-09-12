@@ -1,0 +1,201 @@
+//color variables
+//primary is the darkest grey icons and text
+//secondary is the lighter grey in the top menu background and the search button
+//tertiary is the grey borders and outline of the search box
+$primary:#333;
+$secondary:#f5f5f5;
+$tertiary:#ccc;
+
+//primary is the blue text, Secondary is medium grey text throughout, and
+//tertiary is the lightest grey (updated on dates)
+$primary-text: #4183c4;
+$secondary-text: #666;
+$tertiary-text: #888;
+
+$bordercolor: #eee;
+$greenbutton: #58a23f;
+
+//mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body{
+  font-family: helvetica;
+}
+
+.overallWrapper{}
+
+//top menu bar styling
+.menuBar{
+  width: 100%;
+  height: 48px;
+  margin:0;
+  background-color:$secondary;
+  border-bottom: solid 1px #ccc;
+}
+.menuWrapper{
+  width: 980px;
+  height: 28px;
+  padding: 20px;
+  margin: 0 auto;
+  position:absolute;
+}
+.menuLeft{
+  display:inline-block;
+}
+.menuRight{
+  float:right;
+  position:relative;
+  width:230px;
+}
+.menuRightUser{
+  float:left;
+  position:relative;
+  img{
+    height: 20px;
+    width: 20px;
+    @include border-radius(3px);
+  }
+}
+.menuRightNav{
+  float:right;
+  position:relative;
+}
+
+//main content styling
+.contents{
+  width: 980px;
+  margin-top: 20px;
+  margin-left: 109.5px;
+  margin-right: 109.5px;
+}
+
+//sidebar styling
+.sideBar{
+  width:25%;
+  padding:0 10px;
+  margin:0;
+  float:left;
+}
+.sideBarFirst{
+  border-bottom: 1px solid $tertiary;
+
+  img{
+    width: 230px;
+    height: 230px;
+    @include border-radius(6px);
+  }
+
+  .mainName{
+    display:block;
+    font-size: 26px;
+    color:$primary;
+    width:100%;
+  }
+
+  .mainLogin{
+    display:block;
+    color:$secondary-text;
+    font-size: 20px;
+    font-weight:300;
+  }
+}
+.sideBarSecond{
+  width: 100%;
+  padding: 2px 0 2px 24px;
+  font-size: 13px;
+  color: $primary;
+  border-bottom: 1px solid $tertiary;
+
+  h3{
+    margin:0;
+    font-weight:300;
+  }
+
+  .email a{
+    color: $primary-text;
+    text-decoration:none;
+  }
+}
+.sideBarThird{
+  border-bottom: 1px solid $tertiary;
+
+  ul{
+    list-style: none;
+    display: inline-block;
+  }
+
+  a{
+    text-decoration: none;
+    font-size: 11px;
+    color: $tertiary-text;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight:300;
+  }
+
+  a span{
+    font-size: 11px;
+    color: $tertiary-text;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight:300;
+  }
+
+  .bigNumbers{
+    display: block;
+    font-size:28px;
+    line-height:1;
+    color: $primary-text;
+    font-weight: bold;
+    text-align:center;
+  }
+}
+.sideBarFourth{
+  border-bottom: 1px solid $tertiary;
+
+  img{
+    height: 42px;
+    width: 42px;
+    @include border-radius(3px);
+  }
+}
+
+//feature (repo list) section
+.mainContent{
+  float:right;
+  width: 75%;
+}
+.mainContentMenu{
+  float:right;
+}
+.mainContentFeature{
+  float:left;
+
+  .repoInfo{
+    margin:0;
+    padding-top:30px;
+    padding-bottom:30px;
+    border-bottom: 1px solid $tertiary;
+  }
+
+  .repoName{
+    color:$primary-text;
+    font-size:14px;
+    margin:0;
+  }
+
+  .repoDescription{
+    font-size:14px;
+    color:$primary;
+    margin:0;
+  }
+
+  .repoDate{
+    font-size:13px;
+    color:$tertiary-text;
+    margin:0;
+  }
+}
