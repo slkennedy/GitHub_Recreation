@@ -26,14 +26,7 @@
 <div class="contents">
   <!--   Side Bar Section-->
   <div class="sideBar">
-    <div class="sideBarFirst">
-    </div>
-    <div class="sideBarSecond">
-    </div>
-    <div class="sideBarThird">
-    </div>
-    <div class="sideBarFourth">
-    </div>
+
   </div>
 <!-- Main Content Section-->
   <div class="mainContent">
@@ -46,6 +39,7 @@
  </div>
 
 <!-- Template Scripts Starts Here-->
+<!-- Top Menu Bar Script -->
 <script id="templateMenuBar" type="text/template">
     <div class="menuRightUser">
       <img src = "<%= avatar_url %>"/>
@@ -53,11 +47,56 @@
     </div>
 </script>
 
+<!-- Main Content Feature (List of Repos) Script -->
 <script id="templateMainContent" type="text/template">
     <div class="repoInfo">
-      <h1><%= repoName %></h1>
-      <p><%= repoDescription %></p>
+      <h1 class="repoName"><%= repoName %></h1>
+      <p class="repoDescription"><%= repoDescription %></p>
       <p><%= updated %></p>
+    </div>
+</script>
+
+<!-- SideBar Script -->
+<script id="templateSideBar" type="text/template">
+    <div class="sideBarFirst">
+      <img src = "<%= avatar_url %>"/>
+      <h1>
+      <span class="mainName"><%= name %></span>
+      <span class="mainLogin"><%= login %></span>
+      </h1>
+    </div>
+    <div class="sideBarSecond">
+      <h3><%= location %></h3>
+      <h3><a href="mailto:slkennedy@gmail.com"><%= email %></a></h3>
+      <h3><%= created_at %></h3>
+    </div>
+    <div class="sideBarThird">
+      <ul>
+        <li>
+          <a href="<%= followers_url %>"
+            <span class="bigNumbers"><%= follwers %></span>
+            <span>Followers</span>
+          </a>
+        </li>
+        <li>
+          <a href="<%=  %>"
+            <span class="bigNumbers"></span>
+            <span>Starred</span>
+          </a>
+        </li>
+        <li>
+          <a href="<%= following_url %>"
+            <span class="bigNumbers"><%= following %></span>
+            <span>Following</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sideBarFourth">
+      <h3>Organizations</h3>
+      <a href ="<%= url %>">
+      <img src="<%= avatar_url %>"/>
+      </a>
     </div>
 </script>
 

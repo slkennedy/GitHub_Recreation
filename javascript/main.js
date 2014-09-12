@@ -36,8 +36,6 @@ $.getJSON("https://api.github.com/users/slkennedy/repos").done(function(repos){
     updated: repo.updated_at,
     language: repo.language};
   });
-console.log(repoData);
-
 
 _.each(repoData, function(output){
 reusableTemplate('templateMainContent', '.mainContentFeature', output);
@@ -45,12 +43,19 @@ reusableTemplate('templateMainContent', '.mainContentFeature', output);
 
 });
 
-
-
-
 // $.getJson("https://api.github.com/users/slkennedy/starred").done(function(starred){
-//   console.log(starred);
+// console.log(starred);
 // });
-// $.getJson("https://api.github.com/users/slkennedy/orgs").done(function(orgs){
-//   console.log(orgs);
-// });
+
+$.getJson("https://api.github.com/users/slkennedy/orgs").done(function(orgs){
+var orgData = _.map(orgs, function(org){
+return{
+  avatar:avatar_url,
+  url:url,
+  };
+});
+
+_.each(orgData, function(output){
+reusableTemplate('templateSideBar', '.sideBar', output);
+});
+});
