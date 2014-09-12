@@ -40,23 +40,31 @@
     <div class="mainContentMenu">
     </div>
     <div class="mainContentFeature">
+
     </div>
   </div>
  </div>
 
-<!-- Script Starts Here-->
+<!-- Template Scripts Starts Here-->
 <script id="templateMenuBar" type="text/template">
-      <div class="menuRightUser">
-        <img src ="<%= avatar %>"/>
-        <span><%= login %></span>
-      </div>
+    <div class="menuRightUser">
+      <img src = "<%= avatar_url %>"/>
+      <span><%= login %></span>
+    </div>
+</script>
+
+<script id="templateMainContent" type="text/template">
+    <div class="repoInfo">
+      <h1><%= repoName %></h1>
+      <p><%= repoDescription %></p>
+      <p><%= updated %></p>
+    </div>
 </script>
 
 <!-- Script Links-->
  <script src = "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
   <script src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src = "http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.js"></script>
-  <script src="token.js"></script>
-  <script src="main.js"></script>
+  <script src="javascript/main.js"></script>
 </body>
 </html>
