@@ -21,7 +21,7 @@ $.getJSON("https://api.github.com/users/slkennedy").done(function(user){
     name: user.name,
     login: user.login,
     email: user.email,
-    created_at: user.created_at,
+    created_at: moment(user.created_at).format("MMMM DD, YYYY"),
     followers: user.followers,
     followersUrl: user.follower_url,
     following: user.following,
@@ -29,31 +29,33 @@ $.getJSON("https://api.github.com/users/slkennedy").done(function(user){
     location: user.location
   };
   reusableTemplate('templateSideBar', '.sideBarTop', sidebarData);
-  $.getJSON('https://api.github.com/users/slkennedy/starred').done(function(stars) {
-    sidebardata.starred = stars.length;
-    renderTemplate('templateSideBar', '.sideBarTop', sidebarData);
-  });
+
 });
 
 $.getJSON("https://api.github.com/users/slkennedy/repos").done(function(repos){
-  var repoData = _.map(repos, function(repo){
+
+var repoData = _.chain(repos)
+ .sortBy(function(sort) {return sort.pushed_at;})
+ .map(function(repo){
   return{
     repoName: repo.name,
     repoDescription: repo.description,
+    repoUrl:repo.html_url,
     forks: repo.forks,
     forksCount: repo.forks_count,
     forksUrl: repo.forks_url,
     gitUrl: repo.git_url,
     stargazersCount: repo.stargazers_count,
     stargazersUrl: repo.stargazers_url,
-    updated: repo.updated_at,
-    language: repo.language};
-  });
+    updated: moment(repo.pushed_at).fromNow(),
+    language: repo.language}
+  })
+  .reverse()
+  .value();
 
 _.each(repoData, function(output){
 reusableTemplate('templateMainContent', '.mainContentFeature', output);
-});
-
+  });
 });
 
 $.getJSON("https://api.github.com/users/slkennedy/orgs").done(function(orgs){

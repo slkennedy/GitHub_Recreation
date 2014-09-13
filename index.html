@@ -7,7 +7,6 @@
 <link href="dist/styles/main.css" rel="stylesheet" type="text/stylesheet">
 <!-- Icon Font Link-->
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-
 </head>
 <body>
 <!-- HTML -->
@@ -15,9 +14,12 @@
 <div class="menubar">
   <div class="menuWrapper">
     <div class="menuLeft">
+<!-- Search bar and list of links on the left of the top menu-->
       <ul>
         <li>
-          <a href="https://github.com/"><span class="mega-octicon octicon-mark-github"></a>
+          <a href="https://github.com/">
+            <span class="mega-octicon octicon-mark-github"></span>
+          </a>
         </li>
         <li>
           <form class=searchBar>
@@ -36,15 +38,15 @@
         <li>
           <a href="https://help.github.com/">Help</a>
         </li>
-    </ul>
+      </ul>
     </div>
     <div class="menuRight">
       <div class= "menurtuser">
       </div>
       <div class="menuRightNav">
-        <a href="https://github.com/slkennedy?tab=repositories">
+        <a href="https://github.com/new">
           <span class="mega-octicon octicon-plus"></span>
-          <span class="octicon octicon-triangle-down"></span>
+            <span class="octicon octicon-triangle-down"></span>
         </a>
         <a href="https://github.com/notifications">
           <span class="mega-octicon octicon-inbox"></span>
@@ -61,42 +63,98 @@
 </div>
 <!-- Contents Section-->
 <div class="contents">
+  <div class="contentwrapper">
 <!--   Side Bar Section-->
-  <div class="sideBar">
-    <div class="sideBarTop"></div>
-    <div class="sideBarBottom">
-      <h3>Organizations</h3>
+    <div class="sideBar">
+      <div class="sideBarTop">
+      </div>
+      <div class="sideBarBottom">
+        <h3>Organizations</h3>
+      </div>
     </div>
-</div>
 <!-- Main Content Section-->
-  <div class="mainContent">
-    <div class="mainContentMenu">
-      <ul>
-        <li>
-          <span class="mega-octicon octicon-diff-added"></span>
-          <span class="menuWords">Contributions</span>
-        </li>
-        <li>
-          <span class="mega-octicon octicon-repo"></span>
-          <span class="menuWords">Repositories</span>
-        </li>
-        <li>
-          <span class="mega-octicon octicon-rss"></span>
-          <span class="menuWords">Public activity</span>
-        </li>
-      </ul>
-    </div>
-    <div class="mainContentSearch">
-      <a href="https://github.com/repositories/new">
-        <div class="greenButton">
-          <span class="octicon octicon-repo"> New</span>
+    <div class="mainContent">
+      <div class="mainContentMenu">
+        <ul>
+          <li>
+            <a href ="#">
+              <span class="mega-octicon octicon-diff-added"></span>
+              <span class="menuWords">Contributions</span>
+            </a>
+          </li>
+          <li>
+            <a href ="#">
+              <span class="mega-octicon octicon-repo"></span>
+              <span class="menuWords">Repositories</span>
+            </a>
+          </li>
+          <li>
+            <a href ="#">
+              <span class="mega-octicon octicon-rss"></span>
+              <span class="menuWords">Public activity</span>
+            </a>
+          </li>
+        </ul>
+        <div class="greybutton">
+          <a href="#">
+            <span class="mega-octicon octicon-pencil"></span>
+            <span>Edit profile</span>
+          </a>
         </div>
-      </a>
-    </div>
-    <div class="mainContentFeature">
+      </div>
+      <div class="mainContentSearch">
+        <form>
+          <input type="text" placeholder="Find a repository...">
+        </form>
+        <a href="#">
+          <div class="greybutton">
+            <span>Search</span>
+          </div>
+        </a>
+        <ul class="contentsort">
+          <li>
+            <a href="#">
+              <span>All</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Public</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Private</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Sources</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Forks</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Mirrors</span>
+            </a>
+          </li>
+        </ul>
+        <a href="https://github.com/repositories/new">
+          <div class="greenButton">
+            <span class="octicon octicon-repo"> New</span>
+          </div>
+        </a>
+      </div>
+      <div class="mainContentFeature">
+      </div>
     </div>
   </div>
 </div>
+
 <footer class="mainfooter">
   <div class="footerwrap">
     <ul class="leftfooter">
@@ -145,98 +203,100 @@
 <!-- SCRIPTS: Template Scripts Starts Here-->
 <!-- Top Menu Bar Script -->
 <script id="templateMenuBar" type="text/template">
-    <div class="menuRightUser">
-      <img src = "<%= avatarUrl %>"/>
-      <span><%= login %></span>
-    </div>
+  <div class="menuRightUser">
+    <img src = "<%= avatarUrl %>"/>
+    <span><%= login %></span>
+  </div>
 </script>
 
 <!-- Main Content Feature (List of Repos) Script -->
 <script id="templateMainContent" type="text/template">
-    <ul class = "repodetails">
-      <li>
-        <%= language %>
-      </li>
-      <li>
-        <span class="octicon octicon-star"></span>
-        <a href="<%= stargazersUrl %>"><%= stargazersCount %></a>
-      </li>
-      <li>
-        <span class="octicon octicon-git-branch"></span>
-        <a href="<%= forksUrl %>"><%= forks %></a>
-      </li>
-    </ul>
-    <ul class="repoInfo">
-      <li>
-        <h1 class="repoName"><%= repoName %></h1>
-      </li>
-      <li>
-        <p class="repoDescription"><%= repoDescription %></p>
-      </li>
-      <li>
-        <p class="repoDate"><%= updated %></p>
-      </li>
-    </ul>
+  <ul class = "repodetails">
+    <li>
+      <%= language %>
+    </li>
+    <li>
+      <span class="octicon octicon-star"></span>
+      <a href="<%= stargazersUrl %>"><%= stargazersCount %></a>
+    </li>
+    <li>
+      <span class="octicon octicon-git-branch"></span>
+      <a href="<%= forksUrl %>"><%= forks %></a>
+    </li>
+  </ul>
+  <ul class="repoInfo">
+    <li>
+      <a href="<%= repoUrl %>"><h1 class="repoName"><%= repoName %></h1></a>
+    </li>
+    <li>
+      <p class="repoDescription"><%= repoDescription %></p>
+    </li>
+    <li>
+      <p class="repoDate">Updated <%= updated %></p>
+    </li>
+  </ul>
 </script>
 
 <!-- SideBar Script -->
 <script id="templateSideBar" type="text/template">
-    <div class="sideBarFirst">
-      <img src = "<%= avatarUrl %>"/>
-      <h1>
+  <div class="sideBarFirst">
+    <img src = "<%= avatarUrl %>"/>
+    <h1>
       <span class="mainName"><%= name %></span>
       <span class="mainLogin"><%= login %></span>
-      </h1>
-    </div>
-    <ul class="sideBarSecond">
+    </h1>
+  </div>
+  <ul class="sideBarSecond">
+    <li>
+      <span class="octicon octicon-location"></span>
+      <h3><%= location %></h3>
+    </li>
+    <li>
+      <span class="octicon octicon-mail"></span>
+      <h3 class="email">
+        <a href="mailto:slkennedy@gmail.com"><%= email %></a>
+      </h3>
+    </li>
+    <li>
+      <span class="octicon octicon-clock"></span>
+      <h3>Joined on <%= created_at %></h3>
+    </li>
+  </ul>
+  <div class="sideBarThird">
+    <ul>
       <li>
-        <span class="octicon octicon-location"></span>
-        <h3><%= location %></h3>
-      </li>
-      <li>
-        <span class="octicon octicon-mail"></span>
-        <h3 class="email"><a href="mailto:slkennedy@gmail.com"><%= email %></a></h3>
-      </li>
-      <li>
-        <span class="octicon octicon-clock"></span>
-        <h3><%= created_at %></h3>
+        <a href="<%= followersUrl %>">
+          <span class="bigNumbers"><%= followers %></span>
+          <span>Followers</span>
+        </a>
+      </li><li>
+        <a href="<%= followersUrl %>">
+          <span class="bigNumbers"><%= followers %></span>
+          <span>Starred</span>
+        </a>
+      </li><li>
+        <a href="<%=followingUrl%>">
+          <span class="bigNumbers"><%= following %></span>
+          <span>Following</span>
+        </a>
       </li>
     </ul>
-    <div class="sideBarThird">
-      <ul>
-        <li>
-          <a href="<%= followersUrl %>">
-            <span class="bigNumbers"><%= followers %></span>
-            <span>Followers</span>
-          </a>
-        </li><li>
-          <a href="<%= followersUrl %>">
-            <span class="bigNumbers"><%= followers %></span>
-            <span>Starred</span>
-          </a>
-        </li><li>
-          <a href="<%=followingUrl%>">
-            <span class="bigNumbers"><%= following %></span>
-            <span>Following</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+  </div>
 </script>
 
 <script id="templateSideBarOrgs" type="text/template">
-    <div class="sideBarFourth">
-      <a href ="<%= orgUrl %>">
-        <img src="<%= orgAvatar %>"/>
-      </a>
-    </div>
+  <div class="sideBarFourth">
+    <a href ="<%= orgUrl %>">
+      <img src="<%= orgAvatar %>"/>
+    </a>
+  </div>
 </script>
 
 <!-- Script Links-->
  <script src = "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-  <script src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src = "http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.js"></script>
-  <script src="javascript/token.js"></script>
-  <script src="javascript/main.js"></script>
-</body>
+<script src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src = "http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.js"></script>
+<script src="javascript/token.js"></script>
+<script src="javascript/main.js"></script>
+  </body>
 </html>

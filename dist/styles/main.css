@@ -108,6 +108,9 @@ body {
   margin-left: 109.5px;
   margin-right: 109.5px; }
 
+.contentwrapper {
+  margin: 0 auto; }
+
 .sideBar {
   width: 230px;
   float: left;
@@ -122,7 +125,8 @@ body {
     width: 230px;
     height: 230px;
     -webkit-border-radius: 6px;
-    border-radius: 6px; }
+    border-radius: 6px;
+    margin: 10px; }
   .sideBarFirst .mainName {
     display: block;
     font-size: 26px;
@@ -203,6 +207,8 @@ body {
 .mainContentMenu {
   height: 23px;
   position: relative; }
+  .mainContentMenu a {
+    text-decoration: none; }
   .mainContentMenu ul {
     list-style: none;
     margin: 0;
@@ -216,10 +222,34 @@ body {
   .mainContentMenu .menuWords {
     font-size: 14px;
     color: #333; }
+  .mainContentMenu .greybutton {
+    background-image: linear-gradient(#fcfcfc, #eee);
+    display: inline-block; }
+    .mainContentMenu .greybutton a {
+      text-decoration: none; }
 
 .mainContentSearch .mega-octicon {
   font-size: 16px;
   color: #333; }
+.mainContentSearch input[type=text] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding: 4px 20px 4px 8px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  width: 260px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  color: #ccc;
+  margin-left: 10px; }
+.mainContentSearch .greybutton {
+  display: inline-block; }
+.mainContentSearch ul, .mainContentSearch li {
+  list-style: none;
+  margin-left: 0;
+  display: inline-block;
+  position: relative; }
 .mainContentSearch .greenButton {
   width: 70px;
   height: 32px;
@@ -236,7 +266,7 @@ body {
   text-decoration: none;
   font-family: helvetica;
   font-size: 14px;
-  color: #fff; }
+  color: #4183c4; }
 
 .mainContentFeature {
   float: left;
@@ -250,6 +280,8 @@ body {
     border-bottom: 1px solid #ccc;
     list-style: none;
     padding-left: 0; }
+    .mainContentFeature .repoInfo a {
+      text-decoration: none; }
   .mainContentFeature .repoName {
     color: #4183c4;
     font-size: 20px;
