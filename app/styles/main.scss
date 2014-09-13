@@ -53,6 +53,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 28px;
+    margin-top: 5px;
   }
 
   ul {
@@ -88,10 +89,11 @@ body {
     -webkit-appearance: none;
     padding: 4px 20px 4px 8px;
     @include border-radius (3px);
-    width: 360px;
+    width: 330px;
     display: inline-block;
     border: 1px solid $tertiary;
-    font-size: 13px;
+    font-size: 12px;
+    margin-top: -2px;
     color: $tertiary;
   }
 }
@@ -110,6 +112,8 @@ body {
 .menuRightUser {
   float: left;
   position: relative;
+  margin-top: 3px;
+
   img{
     height: 20px;
     width: 20px;
@@ -119,7 +123,10 @@ body {
   span {
     float:right;
     margin-top: 2px;
-    font-size: 13px;
+    font-size: 12px;
+    margin-left: 3px;
+    margin-right: 10px;
+    padding-top: 2px;
     font-weight: bold;
     color: $primary;
   }
@@ -127,15 +134,19 @@ body {
 .menuRightNav {
   float: right;
   position: relative;
-  font-size: 18px;
 
   a {
     text-decoration:none;
     color: $primary;
+    font-size: 20px;
   }
 
   span {
     padding: 4px 8px;
+  }
+
+  .mega-octicon {
+    font-size: 18px;
   }
 
   .octicon-plus {
@@ -338,6 +349,7 @@ body {
   float:left;
   margin-left: 10px;
   width: 100%;
+  margin-bottom: 40px;
 
   .repoInfo {
     margin: 0;
@@ -370,6 +382,8 @@ body {
   list-style: none;
   padding-left: 0;
   float:right;
+  margin: 0;
+  padding-top: 30px;
 
     li{
       display:inline-block;
@@ -391,5 +405,76 @@ body {
       margin-left: 8px;
       font-size: 12px;
       font-weight: bold;
+    }
+}
+
+.mainfooter {
+  height: 98px;
+  clear: both;
+  margin-top: 40px;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.footerwrap {
+  width: 980px;
+  height: 98px;
+  margin: 0 auto;
+  border-top: 1px solid $tertiary;
+
+
+
+
+  .octicon{
+    color: $tertiary;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    font-size: 24px;
+    padding-top: 40px;
+    margin-left: -12px;
+  }
+}
+
+.leftfooter {
+  float: left;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+
+  li {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+    color: $tertiary-text;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 12px;
+    color: $primary-text;
+  }
+}
+.rightfooter {
+  float: right;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+    a {
+      text-decoration: none;
+      font-size: 12px;
+      color: $primary-text;
     }
 }
