@@ -71,6 +71,6 @@ reusableTemplate('templateSideBarOrgs', '.sidebarbottom', output);
 });
 });
 
-// $( ".maincontentmenu li" ).on('click' function(event) {
-//   $( this ).toggleClass( "tabnav-selected" );
+// $(".tabnav span").on('click' function(event) {
+//   $(this).toggleClass("tabnav-selected");
 // });

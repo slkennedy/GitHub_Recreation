@@ -190,7 +190,6 @@ body {
     width: 230px;
     height: 230px;
     @include border-radius(6px);
-    margin: 10px;
   }
 
   .mainname {
@@ -300,15 +299,18 @@ body {
 .maincontentmenu {
   height: 23px;
   position: relative;
-
+  *{outline: red 2px solid;
+  }
   a {
     text-decoration:none;
+    color: $primary;
   }
 
   ul {
     list-style:none;
     margin:0;
     padding: 0;
+    display:inline-block;
   }
 
   li {
@@ -326,26 +328,50 @@ body {
     color: $primary;
   }
 
-  .tabnav {
-    border: 1px solid transparent;
-  }
-
-/*   .tabnav-selected {
+/*   .tabnav {
+  border: 1px solid transparent;
+}
+.tabnav-selected {
   border: 1px solid \$tertiary;
   border-radius: 3px 3px 0 0;
+  font-family:fantasy;
 } */
 
   .greybutton {
-    background-image: linear-gradient(#fcfcfc, #eee);
-    display: inline-block;
 
+    div {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      margin-top: 5px;
+      background: $secondary;
+      border: $tertiary 1px solid;
+      border-radius: 3px;
+      font-weight: bold;
+      padding: 2px;
+      font-size: 14px;
+    }
     a {
       text-decoration: none;
+    }
+
+    div:hover {
+      background: $tertiary;
     }
   }
 }
 
 .maincontentsearch {
+  margin-top: 17px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $tertiary;
+  * {outline: 2px solid red;
+  }
+
+  form {
+    display:inline-block;
+  }
+
   .mega-octicon {
     font-size:16px;
     color: $primary;
@@ -361,11 +387,6 @@ body {
     border: 1px solid $tertiary;
     font-size: 12px;
     color: $tertiary;
-    margin-left: 10px;
-  }
-
-  .greybutton {
-    display: inline-block;
   }
 
   ul, li {
@@ -373,6 +394,29 @@ body {
     margin-left: 0;
     display: inline-block;
     position: relative;
+    padding-left: 0
+  }
+
+  .greybutton {
+
+    div {
+      display: inline-block;
+      margin-top: 5px;
+      background: $secondary;
+      border: $tertiary 1px solid;
+      border-radius: 3px;
+      font-weight: bold;
+      padding: 2px;
+      font-size: 14px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    div:hover {
+      background: $tertiary;
+    }
   }
 
   .greenbutton {
