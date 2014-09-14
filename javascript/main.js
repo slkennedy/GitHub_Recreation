@@ -28,7 +28,7 @@ $.getJSON("https://api.github.com/users/slkennedy").done(function(user){
     followingUrl: user.following_url,
     location: user.location
   };
-  reusableTemplate('templateSideBar', '.sideBarTop', sidebarData);
+  reusableTemplate('templateSideBar', '.sidebartop', sidebarData);
 
 });
 
@@ -54,7 +54,7 @@ var repoData = _.chain(repos)
   .value();
 
 _.each(repoData, function(output){
-reusableTemplate('templateMainContent', '.mainContentFeature', output);
+reusableTemplate('templateMainContent', '.maincontentfeature', output);
   });
 });
 
@@ -67,6 +67,10 @@ return{
 });
 
 _.each(orgData, function(output){
-reusableTemplate('templateSideBarOrgs', '.sideBarBottom', output);
+reusableTemplate('templateSideBarOrgs', '.sidebarbottom', output);
 });
 });
+
+// $( ".maincontentmenu li" ).on('click' function(event) {
+//   $( this ).toggleClass( "tabnav-selected" );
+// });

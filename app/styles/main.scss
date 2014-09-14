@@ -38,14 +38,14 @@ body {
   background-color: $secondary;
   border-bottom: solid 1px #ccc;
 }
-.menuWrapper {
+.menuwrapper {
   width: 980px;
   height: 48px;
   margin-left: auto;
   margin-right: auto;
   position:relative;
 }
-.menuLeft {
+.menuleft {
   position: absolute;
 
   .mega-octicon {
@@ -83,7 +83,7 @@ body {
     margin: 0;
   }
 }
-.searchBar {
+.searchbar {
   input[type=text] {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -98,7 +98,7 @@ body {
   }
 }
 
-.menuRight {
+.menuright {
   float: right;
   position: relative;
   padding-top:10px;
@@ -109,7 +109,7 @@ body {
   display:inline-block;
 }
 
-.menuRightUser {
+.menurightuser {
   float: left;
   position: relative;
   margin-top: 3px;
@@ -131,7 +131,7 @@ body {
     color: $primary;
   }
 }
-.menuRightNav {
+.menurightnav {
   float: right;
   position: relative;
 
@@ -173,12 +173,12 @@ body {
   margin: 0 auto;
 }
 //sidebar styling
-.sideBar {
+.sidebar {
   width:230px;
   float:left;
   padding: 0 10px;
 }
-.sideBarFirst {
+.sidebarfirst {
   border-bottom: 1px solid $tertiary;
 
   h1{
@@ -193,7 +193,7 @@ body {
     margin: 10px;
   }
 
-  .mainName {
+  .mainname {
     display:block;
     font-size: 26px;
     color:$primary;
@@ -201,14 +201,14 @@ body {
     margin-top:5px;
   }
 
-  .mainLogin {
+  .mainlogin {
     display:block;
     color:$secondary-text;
     font-size: 20px;
     font-weight:300;
   }
 }
-.sideBarSecond {
+.sidebarsecond {
   font-size: 13px;
   color: $primary;
   border-bottom: 1px solid $tertiary;
@@ -242,7 +242,7 @@ body {
   }
 
 }
-.sideBarThird {
+.sidebarthird {
   border-bottom: 1px solid $tertiary;
   width: 100%;
   padding-top: 15px;
@@ -274,7 +274,7 @@ body {
     font-weight:300;
   }
 
-  .bigNumbers {
+  .bignumbers {
     display: block;
     font-size:28px;
     line-height:1;
@@ -283,7 +283,7 @@ body {
     text-align:center;
   }
 }
-.sideBarFourth {
+.sidebarfourth {
   img {
     height: 42px;
     width: 42px;
@@ -293,11 +293,11 @@ body {
 }
 
 //feature (repo list) section
-.mainContent {
+.maincontent {
   float:right;
   width: 730px;
 }
-.mainContentMenu {
+.maincontentmenu {
   height: 23px;
   position: relative;
 
@@ -321,10 +321,20 @@ body {
     color: $primary;
   }
 
-  .menuWords {
+  .menuwords {
     font-size: 14px;
     color: $primary;
   }
+
+  .tabnav {
+    border: 1px solid transparent;
+  }
+
+/*   .tabnav-selected {
+  border: 1px solid \$tertiary;
+  border-radius: 3px 3px 0 0;
+} */
+
   .greybutton {
     background-image: linear-gradient(#fcfcfc, #eee);
     display: inline-block;
@@ -335,7 +345,7 @@ body {
   }
 }
 
-.mainContentSearch {
+.maincontentsearch {
   .mega-octicon {
     font-size:16px;
     color: $primary;
@@ -365,7 +375,7 @@ body {
     position: relative;
   }
 
-  .greenButton {
+  .greenbutton {
           width:70px;
           height:32px;
           float:right;
@@ -385,13 +395,13 @@ body {
     }
 }
 
-.mainContentFeature {
+.maincontentfeature {
   float:left;
   margin-left: 10px;
   width: 100%;
   margin-bottom: 40px;
 
-  .repoInfo {
+  .repoinfo {
     margin: 0;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -404,19 +414,19 @@ body {
     }
   }
 
-  .repoName {
+  .reponame {
     color:$primary-text;
     font-size:20px;
     margin:0 0 8px 0;
   }
 
-  .repoDescription {
+  .repodescription {
     font-size:14px;
     color:$primary;
     margin:0  0 8px 0;
   }
 
-  .repoDate {
+  .repodate {
     font-size:13px;
     color:$tertiary-text;
     margin:0;

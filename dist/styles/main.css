@@ -10,41 +10,41 @@ body {
   background-color: #f5f5f5;
   border-bottom: solid 1px #ccc; }
 
-.menuWrapper {
+.menuwrapper {
   width: 980px;
   height: 48px;
   margin-left: auto;
   margin-right: auto;
   position: relative; }
 
-.menuLeft {
+.menuleft {
   position: absolute; }
-  .menuLeft .mega-octicon {
+  .menuleft .mega-octicon {
     display: inline-block;
     margin: 0;
     padding: 0;
     font-size: 28px;
     margin-top: 5px; }
-  .menuLeft ul {
+  .menuleft ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: inline-block; }
-  .menuLeft li {
+  .menuleft li {
     display: inline-block;
     padding: 4px 8px;
     margin: 0; }
-  .menuLeft li:first-child {
+  .menuleft li:first-child {
     padding-right: 0;
     padding-left: 0; }
-  .menuLeft a {
+  .menuleft a {
     text-decoration: none;
     color: #333;
     font-size: 13px;
     font-weight: bold;
     margin: 0; }
 
-.searchBar input[type=text] {
+.searchbar input[type=text] {
   -moz-appearance: none;
   -webkit-appearance: none;
   padding: 4px 20px 4px 8px;
@@ -57,7 +57,7 @@ body {
   margin-top: -2px;
   color: #ccc; }
 
-.menuRight {
+.menuright {
   float: right;
   position: relative;
   padding-top: 10px;
@@ -66,16 +66,16 @@ body {
 .menurtuser {
   display: inline-block; }
 
-.menuRightUser {
+.menurightuser {
   float: left;
   position: relative;
   margin-top: 3px; }
-  .menuRightUser img {
+  .menurightuser img {
     height: 20px;
     width: 20px;
     -webkit-border-radius: 3px;
     border-radius: 3px; }
-  .menuRightUser span {
+  .menurightuser span {
     float: right;
     margin-top: 2px;
     font-size: 12px;
@@ -85,20 +85,20 @@ body {
     font-weight: bold;
     color: #333; }
 
-.menuRightNav {
+.menurightnav {
   float: right;
   position: relative; }
-  .menuRightNav a {
+  .menurightnav a {
     text-decoration: none;
     color: #333;
     font-size: 20px; }
-  .menuRightNav span {
+  .menurightnav span {
     padding: 4px 8px; }
-  .menuRightNav .mega-octicon {
+  .menurightnav .mega-octicon {
     font-size: 18px; }
-  .menuRightNav .octicon-plus {
+  .menurightnav .octicon-plus {
     padding-right: 0; }
-  .menuRightNav .octicon-triangle-down {
+  .menurightnav .octicon-triangle-down {
     padding-left: 0;
     font-size: 13px; }
 
@@ -111,35 +111,35 @@ body {
 .contentwrapper {
   margin: 0 auto; }
 
-.sideBar {
+.sidebar {
   width: 230px;
   float: left;
   padding: 0 10px; }
 
-.sideBarFirst {
+.sidebarfirst {
   border-bottom: 1px solid #ccc; }
-  .sideBarFirst h1 {
+  .sidebarfirst h1 {
     margin-top: 0;
     margin-bottom: 15px; }
-  .sideBarFirst img {
+  .sidebarfirst img {
     width: 230px;
     height: 230px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
     margin: 10px; }
-  .sideBarFirst .mainName {
+  .sidebarfirst .mainname {
     display: block;
     font-size: 26px;
     color: #333;
     width: 100%;
     margin-top: 5px; }
-  .sideBarFirst .mainLogin {
+  .sidebarfirst .mainlogin {
     display: block;
     color: #666;
     font-size: 20px;
     font-weight: 300; }
 
-.sideBarSecond {
+.sidebarsecond {
   font-size: 13px;
   color: #333;
   border-bottom: 1px solid #ccc;
@@ -147,45 +147,45 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   margin: 0; }
-  .sideBarSecond ul {
+  .sidebarsecond ul {
     margin: 0; }
-  .sideBarSecond li {
+  .sidebarsecond li {
     display: inline-block;
     line-height: 1.4; }
-  .sideBarSecond h3 {
+  .sidebarsecond h3 {
     margin: 0;
     font-weight: 300;
     display: inline-block; }
-  .sideBarSecond .email a {
+  .sidebarsecond .email a {
     color: #4183c4;
     text-decoration: none; }
-  .sideBarSecond span {
+  .sidebarsecond span {
     color: #ccc; }
 
-.sideBarThird {
+.sidebarthird {
   border-bottom: 1px solid #ccc;
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px; }
-  .sideBarThird ul {
+  .sidebarthird ul {
     list-style: none;
     display: inline-block;
     padding-left: 0;
     width: 200px;
     margin: 0 auto; }
-  .sideBarThird li {
+  .sidebarthird li {
     display: inline-block;
     width: 33.3%;
     text-align: center; }
-  .sideBarThird a {
+  .sidebarthird a {
     text-decoration: none;
     color: #888;
     font-weight: 300; }
-  .sideBarThird a span {
+  .sidebarthird a span {
     font-size: 11px;
     color: #888;
     font-weight: 300; }
-  .sideBarThird .bigNumbers {
+  .sidebarthird .bignumbers {
     display: block;
     font-size: 28px;
     line-height: 1;
@@ -193,45 +193,51 @@ body {
     font-weight: bold;
     text-align: center; }
 
-.sideBarFourth img {
+.sidebarfourth img {
   height: 42px;
   width: 42px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   float: left; }
 
-.mainContent {
+.maincontent {
   float: right;
   width: 730px; }
 
-.mainContentMenu {
+.maincontentmenu {
   height: 23px;
-  position: relative; }
-  .mainContentMenu a {
+  position: relative;
+  /*   .tabnav-selected {
+  border: 1px solid \$tertiary;
+  border-radius: 3px 3px 0 0;
+} */ }
+  .maincontentmenu a {
     text-decoration: none; }
-  .mainContentMenu ul {
+  .maincontentmenu ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-  .mainContentMenu li {
+  .maincontentmenu li {
     display: inline-block;
     padding: 8px 12px 7px; }
-  .mainContentMenu .mega-octicon {
+  .maincontentmenu .mega-octicon {
     font-size: 16px;
     color: #333; }
-  .mainContentMenu .menuWords {
+  .maincontentmenu .menuwords {
     font-size: 14px;
     color: #333; }
-  .mainContentMenu .greybutton {
+  .maincontentmenu .tabnav {
+    border: 1px solid transparent; }
+  .maincontentmenu .greybutton {
     background-image: linear-gradient(#fcfcfc, #eee);
     display: inline-block; }
-    .mainContentMenu .greybutton a {
+    .maincontentmenu .greybutton a {
       text-decoration: none; }
 
-.mainContentSearch .mega-octicon {
+.maincontentsearch .mega-octicon {
   font-size: 16px;
   color: #333; }
-.mainContentSearch input[type=text] {
+.maincontentsearch input[type=text] {
   -moz-appearance: none;
   -webkit-appearance: none;
   padding: 4px 20px 4px 8px;
@@ -243,14 +249,14 @@ body {
   font-size: 12px;
   color: #ccc;
   margin-left: 10px; }
-.mainContentSearch .greybutton {
+.maincontentsearch .greybutton {
   display: inline-block; }
-.mainContentSearch ul, .mainContentSearch li {
+.maincontentsearch ul, .maincontentsearch li {
   list-style: none;
   margin-left: 0;
   display: inline-block;
   position: relative; }
-.mainContentSearch .greenButton {
+.maincontentsearch .greenbutton {
   width: 70px;
   height: 32px;
   float: right;
@@ -262,35 +268,35 @@ body {
   font-weight: bold;
   text-align: center;
   padding: auto 0; }
-.mainContentSearch a {
+.maincontentsearch a {
   text-decoration: none;
   font-family: helvetica;
   font-size: 14px;
   color: #4183c4; }
 
-.mainContentFeature {
+.maincontentfeature {
   float: left;
   margin-left: 10px;
   width: 100%;
   margin-bottom: 40px; }
-  .mainContentFeature .repoInfo {
+  .maincontentfeature .repoinfo {
     margin: 0;
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #ccc;
     list-style: none;
     padding-left: 0; }
-    .mainContentFeature .repoInfo a {
+    .maincontentfeature .repoinfo a {
       text-decoration: none; }
-  .mainContentFeature .repoName {
+  .maincontentfeature .reponame {
     color: #4183c4;
     font-size: 20px;
     margin: 0 0 8px 0; }
-  .mainContentFeature .repoDescription {
+  .maincontentfeature .repodescription {
     font-size: 14px;
     color: #333;
     margin: 0 0 8px 0; }
-  .mainContentFeature .repoDate {
+  .maincontentfeature .repodate {
     font-size: 13px;
     color: #888;
     margin: 0; }

@@ -12,8 +12,8 @@
 <!-- HTML -->
 <!-- Top Menu Bar Section-->
 <div class="menubar">
-  <div class="menuWrapper">
-    <div class="menuLeft">
+  <div class="menuwrapper">
+    <div class="menuleft">
 <!-- Search bar and list of links on the left of the top menu-->
       <ul>
         <li>
@@ -22,7 +22,7 @@
           </a>
         </li>
         <li>
-          <form class=searchBar>
+          <form class=searchbar>
             <input type="text" placeholder="Search GitHub">
           </form>
         </li>
@@ -40,10 +40,10 @@
         </li>
       </ul>
     </div>
-    <div class="menuRight">
+    <div class="menuright">
       <div class= "menurtuser">
       </div>
-      <div class="menuRightNav">
+      <div class="menurightnav">
         <a href="https://github.com/new">
           <span class="mega-octicon octicon-plus"></span>
             <span class="octicon octicon-triangle-down"></span>
@@ -65,31 +65,31 @@
 <div class="contents">
   <div class="contentwrapper">
 <!--   Side Bar Section-->
-    <div class="sideBar">
-      <div class="sideBarTop">
+    <div class="sidebar">
+      <div class="sidebartop">
       </div>
-      <div class="sideBarBottom">
+      <div class="sidebarbottom">
         <h3>Organizations</h3>
       </div>
     </div>
 <!-- Main Content Section-->
-    <div class="mainContent">
-      <div class="mainContentMenu">
+    <div class="maincontent">
+      <div class="maincontentmenu">
         <ul>
           <li>
-            <a href ="#">
+            <a class = "tabnav" href ="#">
               <span class="mega-octicon octicon-diff-added"></span>
               <span class="menuWords">Contributions</span>
             </a>
           </li>
           <li>
-            <a href ="#">
+            <a class = "tabnav" href ="#">
               <span class="mega-octicon octicon-repo"></span>
               <span class="menuWords">Repositories</span>
             </a>
           </li>
           <li>
-            <a href ="#">
+            <a class = "tabnav" href ="#">
               <span class="mega-octicon octicon-rss"></span>
               <span class="menuWords">Public activity</span>
             </a>
@@ -102,7 +102,7 @@
           </a>
         </div>
       </div>
-      <div class="mainContentSearch">
+      <div class="maincontentsearch">
         <form>
           <input type="text" placeholder="Find a repository...">
         </form>
@@ -144,12 +144,12 @@
           </li>
         </ul>
         <a href="https://github.com/repositories/new">
-          <div class="greenButton">
+          <div class="greenbutton">
             <span class="octicon octicon-repo"> New</span>
           </div>
         </a>
       </div>
-      <div class="mainContentFeature">
+      <div class="maincontentfeature">
       </div>
     </div>
   </div>
@@ -203,7 +203,7 @@
 <!-- SCRIPTS: Template Scripts Starts Here-->
 <!-- Top Menu Bar Script -->
 <script id="templateMenuBar" type="text/template">
-  <div class="menuRightUser">
+  <div class="menurightuser">
     <img src = "<%= avatarUrl %>"/>
     <span><%= login %></span>
   </div>
@@ -224,29 +224,29 @@
       <a href="<%= forksUrl %>"><%= forks %></a>
     </li>
   </ul>
-  <ul class="repoInfo">
+  <ul class="repoinfo">
     <li>
-      <a href="<%= repoUrl %>"><h1 class="repoName"><%= repoName %></h1></a>
+      <a href="<%= repoUrl %>"><h1 class="reponame"><%= repoName %></h1></a>
     </li>
     <li>
-      <p class="repoDescription"><%= repoDescription %></p>
+      <p class="repodescription"><%= repoDescription %></p>
     </li>
     <li>
-      <p class="repoDate">Updated <%= updated %></p>
+      <p class="repodate">Updated <%= updated %></p>
     </li>
   </ul>
 </script>
 
 <!-- SideBar Script -->
 <script id="templateSideBar" type="text/template">
-  <div class="sideBarFirst">
+  <div class="sidebarfirst">
     <img src = "<%= avatarUrl %>"/>
     <h1>
-      <span class="mainName"><%= name %></span>
-      <span class="mainLogin"><%= login %></span>
+      <span class="mainname"><%= name %></span>
+      <span class="mainlogin"><%= login %></span>
     </h1>
   </div>
-  <ul class="sideBarSecond">
+  <ul class="sidebarsecond">
     <li>
       <span class="octicon octicon-location"></span>
       <h3><%= location %></h3>
@@ -262,21 +262,21 @@
       <h3>Joined on <%= created_at %></h3>
     </li>
   </ul>
-  <div class="sideBarThird">
+  <div class="sidebarthird">
     <ul>
       <li>
         <a href="<%= followersUrl %>">
-          <span class="bigNumbers"><%= followers %></span>
+          <span class="bignumbers"><%= followers %></span>
           <span>Followers</span>
         </a>
       </li><li>
         <a href="<%= followersUrl %>">
-          <span class="bigNumbers"><%= followers %></span>
+          <span class="bignumbers"><%= followers %></span>
           <span>Starred</span>
         </a>
       </li><li>
         <a href="<%=followingUrl%>">
-          <span class="bigNumbers"><%= following %></span>
+          <span class="bignumbers"><%= following %></span>
           <span>Following</span>
         </a>
       </li>
@@ -285,7 +285,7 @@
 </script>
 
 <script id="templateSideBarOrgs" type="text/template">
-  <div class="sideBarFourth">
+  <div class="sidebarfourth">
     <a href ="<%= orgUrl %>">
       <img src="<%= orgAvatar %>"/>
     </a>
