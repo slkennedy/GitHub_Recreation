@@ -14,7 +14,7 @@
 <div class="menubar">
   <div class="menuwrapper">
     <div class="menuleft">
-<!-- Search bar and list of links on the left of the top menu-->
+<!-- Leftside Search bar and list of links-->
       <ul>
         <li>
           <a href="https://github.com/">
@@ -40,6 +40,7 @@
         </li>
       </ul>
     </div>
+<!-- Rightside account info and links-->
     <div class="menuright">
       <div class= "menurtuser">
       </div>
@@ -66,14 +67,19 @@
   <div class="contentwrapper">
 <!--   Side Bar Section-->
     <div class="sidebar">
+<!-- container of the first 3 sections of the sidebar (account image, name, contact info and follow stats) -->
+<!-- elements and info injected from script template -->
       <div class="sidebartop">
       </div>
+<!-- container of the organizations section of the sidebar -->
+<!-- elements and info injected from script template -->
       <div class="sidebarbottom">
         <h3>Organizations</h3>
       </div>
     </div>
 <!-- Main Content Section-->
     <div class="maincontent">
+<!-- Menu of contributions, repos and public activity and Edit Profile Button -->
       <div class="maincontentmenu">
         <ul>
           <li>
@@ -102,6 +108,7 @@
           </div>
         </a>
       </div>
+<!-- menu of search and sorting options and new repo button -->
       <div class="maincontentsearch">
         <form>
           <input type="text" placeholder="Find a repository...">
@@ -149,14 +156,17 @@
           </div>
         </a>
       </div>
+<!-- container of repo list -->
+<!-- elements and info injected from script template -->
       <div class="maincontentfeature">
       </div>
     </div>
   </div>
 </div>
-
+<!-- footer section -->
 <footer class="mainfooter">
   <div class="footerwrap">
+<!-- leftside navigation links -->
     <ul class="leftfooter">
       <li>
         &copy; 2014 GitHub, Inc.
@@ -174,9 +184,11 @@
         <a href="https://github.com/contact">Contact</a>
       </li>
     </ul>
+<!-- Logo -->
     <a href = "https://github.com/">
       <span class="octicon octicon-mark-github"></span>
     </a>
+<!-- right side nav links -->
     <ul class="rightfooter">
       <li>
         <a href="https://status.github.com/">Status</a>
@@ -211,6 +223,7 @@
 
 <!-- Main Content Feature (List of Repos) Script -->
 <script id="templateMainContent" type="text/template">
+<!-- section to the right of the repo name outlining repo language, stars and forks -->
   <ul class = "repodetails">
     <li>
       <%= language %>
@@ -224,6 +237,7 @@
       <a href="<%= forksUrl %>"><%= forks %></a>
     </li>
   </ul>
+<!-- repo list: name, description and updated on date -->
   <ul class="repoinfo">
     <li>
       <a href="<%= repoUrl %>"><h1 class="reponame"><%= repoName %></h1></a>
@@ -239,6 +253,7 @@
 
 <!-- SideBar Script -->
 <script id="templateSideBar" type="text/template">
+<!-- account image and name section -->
   <div class="sidebarfirst">
     <img src = "<%= avatarUrl %>"/>
     <h1>
@@ -246,6 +261,7 @@
       <span class="mainlogin"><%= login %></span>
     </h1>
   </div>
+<!-- location, email and joined on date section -->
   <ul class="sidebarsecond">
     <li>
       <span class="octicon octicon-location"></span>
@@ -262,6 +278,7 @@
       <h3>Joined on <%= created_at %></h3>
     </li>
   </ul>
+<!-- follower, stars and following stats -->
   <div class="sidebarthird">
     <ul>
       <li>
@@ -285,6 +302,7 @@
 </script>
 
 <script id="templateSideBarOrgs" type="text/template">
+<!-- organizations section -->
   <div class="sidebarfourth">
     <a href ="<%= orgUrl %>">
       <img src="<%= orgAvatar %>"/>
