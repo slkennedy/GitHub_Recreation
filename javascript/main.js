@@ -65,7 +65,3 @@ _.each(orgData, function(output){
 reusableTemplate('templateSideBarOrgs', '.sidebarbottom', output);
 });
 });
-
-// $(".tabnav span").on('click' function(event) {
-//   $(this).toggleClass("tabnav-selected");
-// });
