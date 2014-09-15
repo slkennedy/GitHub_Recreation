@@ -12,9 +12,6 @@ $.getJSON("https://api.github.com/users/slkennedy").done(function(user){
     login: user.login,
   };
   reusableTemplate('templateMenuBar', '.menurtuser', userData);
-});
-
-$.getJSON("https://api.github.com/users/slkennedy").done(function(user){
 
   var sidebarData = {
     avatarUrl: user.avatar_url,
@@ -28,7 +25,12 @@ $.getJSON("https://api.github.com/users/slkennedy").done(function(user){
     followingUrl: user.following_url,
     location: user.location
   };
+
   reusableTemplate('templateSideBar', '.sidebartop', sidebarData);
+
+
+  // $.getJSON("https://api.github.com/users/slkennedy/starred").done(function(star){
+  //   sidebarData.starred = star.length }
 
 });
 
