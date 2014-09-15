@@ -42,6 +42,8 @@ body {
     font-size: 13px;
     font-weight: bold;
     margin: 0; }
+  .menuleft a:hover {
+    color: #4183c4; }
 
 .searchbar input[type=text] {
   -moz-appearance: none;
@@ -83,6 +85,8 @@ body {
     padding-top: 2px;
     font-weight: bold;
     color: #333; }
+  .menurightuser span:hover {
+    color: #4183c4; }
 
 .menurightnav {
   float: right;
@@ -100,6 +104,8 @@ body {
   .menurightnav .octicon-triangle-down {
     padding-left: 0;
     font-size: 13px; }
+  .menurightnav a:hover {
+    color: #4183c4; }
 
 .contents {
   width: 980px;
@@ -138,7 +144,7 @@ body {
     font-weight: 300; }
 
 .sidebarsecond {
-  font-size: 13px;
+  font-size: 12px;
   color: #333;
   border-bottom: 1px solid #ccc;
   padding-left: 0;
@@ -152,11 +158,17 @@ body {
     line-height: 1.4; }
   .sidebarsecond h3 {
     margin: 0;
-    font-weight: 300;
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: 400; }
+  .sidebarsecond .location {
+    margin-left: 14px; }
   .sidebarsecond .email a {
     color: #4183c4;
     text-decoration: none; }
+  .sidebarsecond .email a:hover {
+    text-decoration: underline;
+    color: #4183c4; }
   .sidebarsecond span {
     color: #ccc; }
 
@@ -177,12 +189,13 @@ body {
     text-align: center; }
   .sidebarthird a {
     text-decoration: none;
-    color: #888;
-    font-weight: 300; }
-  .sidebarthird a span {
-    font-size: 11px;
-    color: #888;
-    font-weight: 300; }
+    color: #888; }
+    .sidebarthird a span {
+      font-size: 11px;
+      color: #888;
+      font-weight: 300; }
+    .sidebarthird a :hover {
+      color: #4183c4; }
   .sidebarthird .bignumbers {
     display: block;
     font-size: 28px;
@@ -205,21 +218,11 @@ body {
 .maincontentmenu {
   position: relative;
   border-bottom: 1px solid #ccc;
-  /*   .tabnav {
-  border: 1px solid transparent;
-}
-.tabnav-selected {
-  border: 1px solid \$tertiary;
-  border-radius: 3px 3px 0 0;
-  font-family:fantasy;
-} */ }
+  margin-left: 10px;
+  width: 730px; }
   .maincontentmenu a {
     text-decoration: none;
     color: #333; }
-  .maincontentmenu a:active {
-    border-top: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc; }
   .maincontentmenu ul {
     list-style: none;
     margin: 0;
@@ -238,21 +241,23 @@ body {
     display: inline-block;
     position: absolute;
     right: 0;
-    margin-top: 5px;
     background: #f5f5f5;
     border: #ccc 1px solid;
     border-radius: 3px;
     font-weight: bold;
-    padding: 2px;
-    font-size: 14px; }
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #333; }
   .maincontentmenu .greybutton a {
     text-decoration: none; }
   .maincontentmenu .greybutton div:hover {
     background: #ccc; }
 
 .maincontentsearch {
-  margin-top: 17px;
-  padding-bottom: 12px;
+  margin-top: 8px;
+  margin-left: 10px;
+  width: 730px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #ccc; }
   .maincontentsearch form {
     display: inline-block; }
@@ -266,12 +271,13 @@ body {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     width: 230px;
+    height: 26px;
     display: inline-block;
     border: 1px solid #ccc;
     font-size: 12px;
     color: #ccc; }
   .maincontentsearch ul {
-    margin-left: 40px; }
+    margin-left: 20px; }
   .maincontentsearch ul, .maincontentsearch li {
     list-style: none;
     display: inline-block;
@@ -280,14 +286,18 @@ body {
     margin-right: 7px; }
   .maincontentsearch .greybutton div {
     display: inline-block;
-    margin-top: 5px;
+    height: 26px;
+    width: 70px;
     background: #f5f5f5;
     border: #ccc 1px solid;
     border-radius: 3px;
     font-weight: bold;
-    padding: 2px;
     font-size: 14px;
-    margin-left: 3px; }
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 3px;
+    padding-top: 8px;
+    color: #333; }
   .maincontentsearch .greybutton a {
     text-decoration: none; }
   .maincontentsearch .greybutton div:hover {
@@ -329,41 +339,44 @@ body {
     padding-left: 0; }
     .maincontentfeature .repoinfo a {
       text-decoration: none; }
+    .maincontentfeature .repoinfo a:hover {
+      text-decoration: underline;
+      color: #4183c4; }
   .maincontentfeature .reponame {
     color: #4183c4;
     font-size: 20px;
-    margin: 0 0 8px 0; }
+    margin: 0 0 8px; }
   .maincontentfeature .repodescription {
-    font-size: 14px;
     color: #333;
-    margin: 0 0 8px 0; }
+    font-size: 14px;
+    margin: 0 0 8px; }
   .maincontentfeature .repodate {
-    font-size: 13px;
     color: #888;
+    font-size: 13px;
     margin: 0; }
 
 .repodetails {
-  list-style: none;
-  padding-left: 0;
   float: right;
-  margin: 0;
-  padding-top: 30px; }
+  padding-left: 0;
+  padding-top: 30px;
+  list-style: none;
+  margin: 0; }
   .repodetails li {
-    display: inline-block;
     color: #888;
     font-size: 12px;
-    font-weight: bold; }
+    font-weight: bold;
+    display: inline-block; }
   .repodetails a {
-    text-decoration: none;
     color: #888;
     font-size: 12px;
-    font-weight: bold; }
+    font-weight: bold;
+    text-decoration: none; }
   .repodetails .octicon {
-    text-decoration: none;
     color: #888;
     margin-left: 8px;
     font-size: 12px;
-    font-weight: bold; }
+    font-weight: bold;
+    text-decoration: none; }
 
 .mainfooter {
   height: 98px;
@@ -386,6 +399,8 @@ body {
     font-size: 24px;
     padding-top: 40px;
     margin-left: -12px; }
+  .footerwrap .octicon:hover {
+    color: #666; }
 
 .leftfooter {
   float: left;
@@ -402,17 +417,23 @@ body {
     text-decoration: none;
     font-size: 12px;
     color: #4183c4; }
+  .leftfooter a:hover {
+    text-decoration: underline;
+    color: #4183c4; }
 
 .rightfooter {
   float: right;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-bottom: 0;
   margin-top: 0;
-  margin-bottom: 0; }
+  padding-bottom: 40px;
+  padding-top: 40px; }
   .rightfooter li {
     display: inline-block;
     margin-left: 10px; }
   .rightfooter a {
-    text-decoration: none;
+    color: #4183c4;
     font-size: 12px;
-    color: #4183c4; }
+    text-decoration: none; }
+  .rightfooter a:hover {
+    color: #4183c4;
+    text-decoration: underline; }

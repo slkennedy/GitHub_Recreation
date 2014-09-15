@@ -6,32 +6,25 @@ $(container).append(renderedTemplate);
 }
 
 $.getJSON("https://api.github.com/users/slkennedy").done(function(user){
+$.getJSON("https://api.github.com/users/slkennedy/starred").done(function(star){
 
-  var userData = {
-    avatarUrl: user.avatar_url,
-    login: user.login,
-  };
-  reusableTemplate('templateMenuBar', '.menurtuser', userData);
+   var sidebarData = {
+     avatarUrl: user.avatar_url,
+     name: user.name,
+     login: user.login,
+     email: user.email,
+     created_at: moment(user.created_at).format("MMMM DD, YYYY"),
+     followers: user.followers,
+     followersUrl: user.follower_url,
+     following: user.following,
+     followingUrl: user.following_url,
+     location: user.location,
+     starred: star.length
+   };
 
-  var sidebarData = {
-    avatarUrl: user.avatar_url,
-    name: user.name,
-    login: user.login,
-    email: user.email,
-    created_at: moment(user.created_at).format("MMMM DD, YYYY"),
-    followers: user.followers,
-    followersUrl: user.follower_url,
-    following: user.following,
-    followingUrl: user.following_url,
-    location: user.location
-  };
-
-  reusableTemplate('templateSideBar', '.sidebartop', sidebarData);
-
-
-  // $.getJSON("https://api.github.com/users/slkennedy/starred").done(function(star){
-  //   sidebarData.starred = star.length }
-
+     reusableTemplate('templateMenuBar', '.menurtuser', sidebarData);
+     reusableTemplate('templateSideBar', '.sidebartop', sidebarData);
+   });
 });
 
 $.getJSON("https://api.github.com/users/slkennedy/repos").done(function(repos){
@@ -50,7 +43,7 @@ var repoData = _.chain(repos)
     stargazersCount: repo.stargazers_count,
     stargazersUrl: repo.stargazers_url,
     updated: moment(repo.pushed_at).fromNow(),
-    language: repo.language}
+    language: repo.language};
   })
   .reverse()
   .value();

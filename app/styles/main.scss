@@ -1,13 +1,13 @@
 //color variables
-//primary is the darkest grey icons and text
-//secondary is the lighter grey in the top menu background and the search button
-//tertiary is the grey borders and outline of the search box
+//primary: darkest grey icons and text
+//secondary: lighter grey in the top menu background and the search button
+//tertiary: grey borders and outline of the search box
 $primary:#333;
 $secondary:#f5f5f5;
 $tertiary:#ccc;
 
-//primary is the blue text, Secondary is medium grey text throughout, and
-//tertiary is the lightest grey (updated on dates)
+//primary: blue text, Secondary is medium grey text throughout, and
+//tertiary: lightest grey (updated on dates)
 $primary-text: #4183c4;
 $secondary-text: #666;
 $tertiary-text: #888;
@@ -21,6 +21,7 @@ $greenbutton: #58a23f;
   border-radius: $radius;
 }
 
+//styling
 body {
   font-family: helvetica;
   margin: 0;
@@ -34,16 +35,20 @@ body {
   background-color: $secondary;
   border-bottom: solid 1px #ccc;
 }
+
 .menuwrapper {
   width: 980px;
   height: 48px;
   margin-left: auto;
   margin-right: auto;
-  position:relative;
+  position: relative;
 }
+
+//leftside image, search bar and nav links
 .menuleft {
   position: absolute;
 
+//image (icon font)
   .mega-octicon {
     display: inline-block;
     margin: 0;
@@ -52,6 +57,7 @@ body {
     margin-top: 5px;
   }
 
+//nav links
   ul {
     list-style: none;
     margin: 0;
@@ -78,7 +84,13 @@ body {
     font-weight: bold;
     margin: 0;
   }
+
+  a:hover {
+    color: $primary-text;
+  }
 }
+
+//leftside search bar
 .searchbar {
   input[type=text] {
     -moz-appearance: none;
@@ -94,30 +106,32 @@ body {
   }
 }
 
+//rightside account info and links
 .menuright {
   float: right;
   position: relative;
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .menurtuser {
-  display:inline-block;
+  display: inline-block;
 }
 
+//account info
 .menurightuser {
   float: left;
   position: relative;
   margin-top: 3px;
 
-  img{
+  img {
     height: 20px;
     width: 20px;
     @include border-radius(3px);
   }
 
   span {
-    float:right;
+    float: right;
     margin-top: 2px;
     font-size: 12px;
     margin-left: 3px;
@@ -126,13 +140,19 @@ body {
     font-weight: bold;
     color: $primary;
   }
+
+  span:hover {
+    color: $primary-text;
+  }
 }
+
+//account links(icon fonts)
 .menurightnav {
   float: right;
   position: relative;
 
   a {
-    text-decoration:none;
+    text-decoration: none;
     color: $primary;
     font-size: 20px;
   }
@@ -146,16 +166,18 @@ body {
   }
 
   .octicon-plus {
-    padding-right:0;
+    padding-right: 0;
   }
 
   .octicon-triangle-down {
     padding-left: 0;
     font-size: 13px;
   }
+
+  a:hover {
+    color: $primary-text;
+  }
 }
-
-
 
 //main content styling
 .contents {
@@ -168,16 +190,19 @@ body {
 .contentwrapper {
   margin: 0 auto;
 }
+
 //sidebar styling
 .sidebar {
-  width:230px;
-  float:left;
+  width: 230px;
+  float: left;
   padding: 0 10px;
 }
+
+//container of image and account name
 .sidebarfirst {
   border-bottom: 1px solid $tertiary;
 
-  h1{
+  h1 {
     margin-top: 0;
     margin-bottom: 15px;
   }
@@ -189,22 +214,24 @@ body {
   }
 
   .mainname {
-    display:block;
+    display: block;
     font-size: 26px;
-    color:$primary;
-    width:100%;
-    margin-top:5px;
+    color: $primary;
+    width: 100%;
+    margin-top: 5px;
   }
 
   .mainlogin {
-    display:block;
-    color:$secondary-text;
+    display: block;
+    color: $secondary-text;
     font-size: 20px;
-    font-weight:300;
+    font-weight: 300;
   }
 }
+
+//container of location, email and joined on date
 .sidebarsecond {
-  font-size: 13px;
+  font-size: 12px;
   color: $primary;
   border-bottom: 1px solid $tertiary;
   padding-left: 0;
@@ -223,13 +250,23 @@ body {
 
   h3 {
     margin: 0;
-    font-weight: 300;
     display: inline-block;
+    margin-left: 10px;
+    font-weight: 400;
+  }
+
+  .location {
+    margin-left: 14px;
   }
 
   .email a {
     color: $primary-text;
-    text-decoration:none;
+    text-decoration: none;
+  }
+
+  .email a:hover {
+    text-decoration: underline;
+    color: $primary-text;
   }
 
   span {
@@ -237,6 +274,8 @@ body {
   }
 
 }
+
+//container of follower, starred and following stats
 .sidebarthird {
   border-bottom: 1px solid $tertiary;
   width: 100%;
@@ -260,67 +299,70 @@ body {
   a {
     text-decoration: none;
     color: $tertiary-text;
-    font-weight:300;
-  }
 
-  a span {
-    font-size: 11px;
-    color: $tertiary-text;
-    font-weight:300;
+    span {
+      font-size: 11px;
+      color: $tertiary-text;
+      font-weight: 300;
+    }
+
+    :hover {
+      color: $primary-text;
+    }
   }
 
   .bignumbers {
     display: block;
-    font-size:28px;
-    line-height:1;
+    font-size: 28px;
+    line-height: 1;
     color: $primary-text;
     font-weight: bold;
-    text-align:center;
+    text-align: center;
   }
 }
+
+//container of linked organizations
 .sidebarfourth {
   img {
     height: 42px;
     width: 42px;
     @include border-radius(3px);
-    float:left;
+    float: left;
   }
 }
 
-//feature (repo list) section
+//feature section (repo list)
 .maincontent {
-  float:right;
+  float: right;
   width: 730px;
 }
+
+//feature tabs for contributions, repos and public activity
 .maincontentmenu {
   position: relative;
   border-bottom: 1px solid $tertiary;
+  margin-left: 10px;
+  width: 730px;
 
   a {
-    text-decoration:none;
+    text-decoration: none;
     color: $primary;
   }
 
-  a:active {
-    border-top:1px solid $tertiary;
-    border-left: 1px solid $tertiary;
-    border-right: 1px solid $tertiary;
-  }
-
   ul {
-    list-style:none;
-    margin:0;
+    list-style: none;
+    margin: 0;
     padding: 0;
-    display:inline-block;
+    display: inline-block;
   }
 
   li {
-    display:inline-block;
+    display: inline-block;
     padding: 8px 12px 7px;
   }
 
   .mega-octicon {
-    font-size:16px;
+    font-size: 16px;
     color: $primary;
   }
 
@@ -329,29 +371,21 @@ body {
     color: $primary;
   }
 
-/*   .tabnav {
-  border: 1px solid transparent;
-}
-.tabnav-selected {
-  border: 1px solid \$tertiary;
-  border-radius: 3px 3px 0 0;
-  font-family:fantasy;
-} */
-
   .greybutton {
 
     div {
       display: inline-block;
       position: absolute;
       right: 0;
-      margin-top: 5px;
       background: $secondary;
       border: $tertiary 1px solid;
       border-radius: 3px;
       font-weight: bold;
-      padding: 2px;
-      font-size: 14px;
+      padding: 5px 10px;
+      font-size: 12px;
+      color: $primary;
     }
+
     a {
       text-decoration: none;
     }
@@ -362,17 +396,20 @@ body {
   }
 }
 
+//feature search bar and sorting links
 .maincontentsearch {
-  margin-top: 17px;
-  padding-bottom: 12px;
+  margin-top: 8px;
+  margin-left: 10px;
+  width: 730px;
+  padding-bottom: 5px;
   border-bottom: 1px solid $tertiary;
 
   form {
-    display:inline-block;
+    display: inline-block;
   }
 
   .mega-octicon {
-    font-size:16px;
+    font-size: 16px;
     color: $primary;
   }
 
@@ -382,6 +419,7 @@ body {
     padding: 4px 20px 4px 8px;
     @include border-radius (3px);
     width: 230px;
+    height: 26px;
     display: inline-block;
     border: 1px solid $tertiary;
     font-size: 12px;
@@ -389,14 +427,14 @@ body {
   }
 
   ul {
-    margin-left: 40px;
+    margin-left: 20px;
   }
 
-  ul, li {
+  ul,
+  li {
     list-style: none;
     display: inline-block;
     padding-left: 0;
-
   }
 
   li {
@@ -407,14 +445,18 @@ body {
 
     div {
       display: inline-block;
-      margin-top: 5px;
+      height: 26px;
+      width: 70px;
       background: $secondary;
       border: $tertiary 1px solid;
       border-radius: 3px;
       font-weight: bold;
-      padding: 2px;
       font-size: 14px;
+      text-align: center;
+      vertical-align: middle;
       margin-left: 3px;
+      padding-top: 8px;
+      color: $primary;
     }
 
     a {
@@ -427,34 +469,36 @@ body {
   }
 
   .greenbutton {
-          width:46px;
-          height:18px;
-          float:right;
-          background-image: -webkit-linear-gradient(#8add6d, #60b044);
-          background-image: -o-linear-gradient(#8add6d, #60b044);
-          background-image: linear-gradient(#8add6d, #60b044);
-          @include border-radius(3px);
-          padding: 7px 12px;
-          margin-left: 2px;
-          margin-top: 5px;
+    width: 46px;
+    height: 18px;
+    float: right;
+    background-image: -webkit-linear-gradient(#8add6d, #60b044);
+    background-image: -o-linear-gradient(#8add6d, #60b044);
+    background-image: linear-gradient(#8add6d, #60b044);
+    @include border-radius(3px);
+    padding: 7px 12px;
+    margin-left: 2px;
+    margin-top: 5px;
   }
-    a {
-      text-decoration:none;
-      font-family:helvetica;
-      font-size:14px;
-      color: $primary-text;
-    }
 
-    .octicon {
-      font-size: 14px;
-      color: #fff;
-      font-weight: bold;
-      text-align:center;
-    }
+  a {
+    text-decoration: none;
+    font-family: helvetica;
+    font-size: 14px;
+    color: $primary-text;
+  }
+
+  .octicon {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
+//repository listing
 .maincontentfeature {
-  float:left;
+  float: left;
   margin-left: 10px;
   width: 100%;
   margin-bottom: 40px;
@@ -467,59 +511,66 @@ body {
     list-style: none;
     padding-left: 0;
 
-    a{
+    a {
       text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: $primary-text;
     }
   }
 
   .reponame {
-    color:$primary-text;
-    font-size:20px;
-    margin:0 0 8px 0;
+    color: $primary-text;
+    font-size: 20px;
+    margin: 0 0 8px;
   }
 
   .repodescription {
-    font-size:14px;
-    color:$primary;
-    margin:0  0 8px 0;
+    color: $primary;
+    font-size: 14px;
+    margin: 0 0 8px;
   }
 
   .repodate {
-    font-size:13px;
-    color:$tertiary-text;
-    margin:0;
+    color: $tertiary-text;
+    font-size: 13px;
+    margin: 0;
   }
 }
-.repodetails{
-  list-style: none;
+
+.repodetails {
+  float: right;
   padding-left: 0;
-  float:right;
-  margin: 0;
   padding-top: 30px;
+  list-style: none;
+  margin: 0;
 
-    li{
-      display:inline-block;
-      color: $tertiary-text;
-      font-size: 12px;
-      font-weight: bold;
-    }
+  li {
+    color: $tertiary-text;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+  }
 
-    a{
-      text-decoration: none;
-      color: $tertiary-text;
-      font-size: 12px;
-      font-weight: bold;
-    }
+  a {
+    color: $tertiary-text;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
-    .octicon{
-      text-decoration: none;
-      color: $tertiary-text;
-      margin-left: 8px;
-      font-size: 12px;
-      font-weight: bold;
-    }
+  .octicon {
+    color: $tertiary-text;
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+  }
 }
 
+//footer styling
 .mainfooter {
   height: 98px;
   clear: both;
@@ -537,7 +588,8 @@ body {
   margin: 0 auto;
   border-top: 1px solid $tertiary;
 
-  .octicon{
+//center icon
+  .octicon {
     color: $tertiary;
     text-decoration: none;
     position: absolute;
@@ -546,15 +598,19 @@ body {
     padding-top: 40px;
     margin-left: -12px;
   }
+
+  .octicon:hover {
+    color: $secondary-text;
+  }
 }
 
+//leftside links
 .leftfooter {
   float: left;
   padding-top: 40px;
   padding-bottom: 40px;
   margin-top: 0;
   margin-bottom: 0;
-
 
   li {
     display: inline-block;
@@ -568,22 +624,34 @@ body {
     font-size: 12px;
     color: $primary-text;
   }
+
+  a:hover {
+    text-decoration: underline;
+    color: $primary-text;
+  }
 }
+
+//rightside nav links
 .rightfooter {
   float: right;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 0;
   margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 40px;
+  padding-top: 40px;
 
   li {
     display: inline-block;
     margin-left: 10px;
   }
 
-    a {
-      text-decoration: none;
-      font-size: 12px;
-      color: $primary-text;
-    }
+  a {
+    color: $primary-text;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $primary-text;
+    text-decoration: underline;
+  }
 }
